@@ -35,6 +35,9 @@ def main():
         result = ali.aliyundrive_check_in(token)
         message_all.append(str(result))
 
+        print(idx)
+        print(str(result))
+
         if idx < len(token_string) - 1:
             message_all.append('--')
 
@@ -42,8 +45,8 @@ def main():
     message_all = '\n'.join(message_all)
     message_all = re.sub('\n+', '\n', message_all).rstrip('\n')
 
-    message_send = MessageSend()
-    message_send.send_all(message_tokens, title, message_all)
+    # message_send = MessageSend()
+    # message_send.send_all(message_tokens, title, message_all)
 
     print('finish')
 
